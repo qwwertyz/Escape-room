@@ -2,7 +2,7 @@
 Godot 4 game which tests the player's ability to use interdisciplinary skills
 
 # Daily Workflow 
- 1. Update your local repo
+ 1. Update your local repo(before editing anything)
 
     git fetch origin
     
@@ -24,3 +24,16 @@ Godot 4 game which tests the player's ability to use interdisciplinary skills
 
 5. Push to GitHub
      git push origin main
+
+# notes
+• Always use .tscn scenes and .gd scripts (text format).
+
+• Add a proper .gitignore: 
+.import/ 
+.godot/ 
+export_presets.cfg 
+.DS_Store
+
+• Avoid editing the same scene at the same time.
+
+• Always pull before opening Godot to prevent overwriting remote changes.
