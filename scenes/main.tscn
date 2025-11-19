@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://tvd1lxbox6ak"]
+
+[ext_resource type="Texture2D" uid="uid://c4xfiu5frv7bq" path="res://images/temp_bg.png" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://gxesow6ok5jd" path="res://scenes/curtains.gd" id="1_o5qli"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TempBg" type="Sprite2D" parent="."]
+position = Vector2(533, 318)
+texture = ExtResource("1_0wfyh")
+
+[node name="Gordijn" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 71.0
+offset_right = 254.0
+offset_bottom = 390.0
+text = "GORDIJN"
+script = ExtResource("1_o5qli")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="ball" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 23.0
+offset_right = 559.0
+offset_bottom = 54.0
+text = "mirror
+"
+
+[node name="ball2" type="Button" parent="."]
+offset_left = 284.0
+offset_top = 73.0
+offset_right = 321.0
+offset_bottom = 104.0
+text = "ball"
+
+[node name="ball3" type="Button" parent="."]
+offset_left = 580.0
+offset_top = 243.0
+offset_right = 617.0
+offset_bottom = 274.0
+text = "ball"
+
+[node name="ball4" type="Button" parent="."]
+offset_left = 397.0
+offset_top = 331.0
+offset_right = 456.0
+offset_bottom = 362.0
+text = "mirror
+"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_top = 36.0
+offset_right = 946.0
+offset_bottom = 631.0
+text = "Begin: Het is donker hier, jullie kunnen niets zien en dus kunnen het geheime raadsel van verdwijnen van de professor Kamilla Andrien niet oplossen. Misschien helpt dit jullie om iets in de ruimte te kunnen zien. 
+
+ 
+
+ 
+
+Deze raadsel is over kracht in de ruimte tussen verschillende hemellichamen, kunne jullie bepalen over welke hemellichaam het gaat? 
+
+Formule  
+
+ 
+
+Instructies: Fgrav = 3,52 * 10^22 N 
+
+G = constante(zelf opzoeken) 
+
+Maarde = (zelf opzoeken) 
+
+r = 1,496 * 10^11 
+
+m = niet bekende "
+autowrap_mode = 1
+
+[connection signal="pressed" from="Gordijn" to="Gordijn" method="_on_pressed"]
