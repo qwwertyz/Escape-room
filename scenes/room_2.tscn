@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://tvd1lxbox6ak"]
+
+[ext_resource type="Texture2D" uid="uid://c4xfiu5frv7bq" path="res://images/temp_bg.png" id="1_hx442"]
+[ext_resource type="Script" uid="uid://fmo17p8nnbg1" path="res://scripts/arrow.gd" id="3_6wv7r"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TempBg" type="Sprite2D" parent="."]
+position = Vector2(555.25, 330.5)
+scale = Vector2(1.04028, 1.04662)
+texture = ExtResource("1_hx442")
+
+[node name="ArrowLeft" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 292.0
+offset_right = 99.0
+offset_bottom = 353.0
+text = "⬅️"
+script = ExtResource("3_6wv7r")
+destination_scene = 3
+
+[node name="ArrowRight" type="Button" parent="."]
+offset_left = 1002.0
+offset_top = 315.0
+offset_right = 1092.0
+offset_bottom = 376.0
+text = "⬅️"
+script = ExtResource("3_6wv7r")
+destination_scene = 1
+
+[connection signal="pressed" from="ArrowLeft" to="ArrowLeft" method="_on_pressed"]
+[connection signal="pressed" from="ArrowRight" to="ArrowRight" method="_on_pressed"]
