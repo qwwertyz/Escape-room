@@ -14,7 +14,7 @@
 size = Vector2(164, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wlnl"]
-size = Vector2(44, 35)
+size = Vector2(126, 91.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_d0u7m")
@@ -54,27 +54,9 @@ offset_bottom = 293.0
 script = ExtResource("4_3wwl0")
 
 [node name="Line2D" type="Line2D" parent="Rays"]
-position = Vector2(425, 336)
-points = PackedVector2Array(-222, -127, -1, 29, 219, -83, -92, -249, 133, -302)
+position = Vector2(206, 225)
 
 [node name="Laser" type="RayCast2D" parent="Rays"]
-position = Vector2(206, 215)
-target_position = Vector2(231, 141)
-collide_with_areas = true
-
-[node name="Laser2" type="RayCast2D" parent="Rays"]
-position = Vector2(433, 352)
-target_position = Vector2(206, -98)
-collide_with_areas = true
-
-[node name="Laser3" type="RayCast2D" parent="Rays"]
-position = Vector2(640, 252)
-target_position = Vector2(-301, -165)
-collide_with_areas = true
-
-[node name="Laser4" type="RayCast2D" parent="Rays"]
-position = Vector2(341, 90)
-target_position = Vector2(218, -58)
 collide_with_areas = true
 
 [node name="LightSystem" type="Control" parent="."]
@@ -92,14 +74,12 @@ script = ExtResource("5_3wwl0")
 position = Vector2(540, 26)
 shape = SubResource("RectangleShape2D_3wwl0")
 
-[node name="SphereReflector" type="Node2D" parent="LightSystem"]
+[node name="SphereReflector" type="Node2D" parent="LightSystem" groups=["refractor"]]
 script = ExtResource("6_wy464")
 
-[node name="Area2D" type="Area2D" parent="LightSystem/SphereReflector"]
-collision_layer = 3
-collision_mask = 3
+[node name="Area2D" type="Area2D" parent="LightSystem/SphereReflector" groups=["refractor"]]
 
-[node name="Sphere" type="Button" parent="LightSystem/SphereReflector/Area2D"]
+[node name="Sphere" type="Button" parent="LightSystem/SphereReflector/Area2D" groups=["refractor"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -113,11 +93,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "ball"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSystem/SphereReflector/Area2D"]
-position = Vector2(438, 352)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSystem/SphereReflector/Area2D" groups=["refractor"]]
+position = Vector2(441, 342)
 shape = SubResource("RectangleShape2D_4wlnl")
 
-[node name="Sphere2" type="Button" parent="LightSystem"]
+[node name="Sphere2" type="Button" parent="LightSystem" groups=["refractor"]]
 layout_mode = 0
 offset_left = 623.0
 offset_top = 236.0
@@ -125,7 +105,7 @@ offset_right = 660.0
 offset_bottom = 267.0
 text = "ball"
 
-[node name="Sphere3" type="Button" parent="LightSystem"]
+[node name="Sphere3" type="Button" parent="LightSystem" groups=["refractor"]]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 71.0

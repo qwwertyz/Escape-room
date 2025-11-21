@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/paste_clipboard_image/plugin.cfg")
 
+[global_group]
+
+refractor=""
+
+[layer_names]
+
+2d_physics/layer_1="laser"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
